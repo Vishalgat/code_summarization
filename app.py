@@ -2,7 +2,7 @@ import streamlit as st
 from transformers import pipeline
 
 # Initialize the summarizer pipeline
-summarizer = pipeline('text2text-generation', model='mooo16/gemini-1.5-pro-gemma-rewrite-1024')
+summarizer = pipeline('text2text-generation', model='describeai/gemini-small')
 
 # Streamlit app title
 st.title("Code Summarizer")
