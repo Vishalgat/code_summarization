@@ -1,16 +1,12 @@
 import streamlit as st
 from transformers import pipeline
 
-# Initialize the summarizer pipeline
 summarizer = pipeline('text2text-generation', model='describeai/gemini-small')
 
-# Streamlit app title
 st.title("Code Summarizer")
 
-# Text area for user to input code
 code = st.text_area("Enter your code here:", height=300)
 
-# Summarize button
 if st.button("Summarize Code"):
     if code:
         with st.spinner("Summarizing..."):
